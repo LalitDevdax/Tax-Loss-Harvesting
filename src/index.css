@@ -1,0 +1,113 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased transition-colors duration-500 min-h-screen font-normal;
+  }
+
+  body.dark {
+    @apply bg-[#080b13] text-slate-200;
+  }
+
+  /* Hide default browser number input spinners */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+@layer components {
+  /* Ultra-sleek premium card styles */
+  .glass-card {
+    @apply bg-white/70 border border-slate-100/70 shadow-[0_8px_30px_rgb(0,0,0,0.02)] rounded-2xl transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)];
+  }
+  
+  .dark .glass-card {
+    @apply bg-[#0e1322]/80 border-slate-900/50 shadow-none;
+  }
+
+  /* Micro-animation transitions */
+  .transition-premium {
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Cards stay static on hover, only subtle border/shadow fade, no translation movement */
+  .hover-card-lift {
+    @apply hover:shadow-[0_12px_24px_rgba(0,0,0,0.015)] dark:hover:bg-[#11182c]/80 hover:border-slate-200/30 dark:hover:border-slate-800/40;
+  }
+
+  /* Global custom scrollbar style to match the UI */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-200/80 rounded-full dark:bg-slate-800/80;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-300 dark:bg-slate-700;
+  }
+}
+
+/* Custom premium easing micro-animations */
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.checkbox-spring:active {
+  transform: scale(0.92);
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(10px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* Subtly pulse background for tax savings callout */
+@keyframes pulseSubtle {
+  0%, 100% { background-color: rgba(234, 179, 8, 0.22); border-color: rgba(234, 179, 8, 0.35); }
+  50% { background-color: rgba(234, 179, 8, 0.28); border-color: rgba(234, 179, 8, 0.45); }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s infinite ease-in-out;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes slideInRight {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(0); }
+}
+
+
