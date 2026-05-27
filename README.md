@@ -26,12 +26,6 @@ Visualize capital gains, simulate tax-saving strategies, and offset losses again
 |---|---|
 | ![Mobile](docs/screenshots/mobile-view.png) | ![Dropdown](docs/screenshots/dropdown-filter.png) |
 
-**How to add screenshots:**
-1. Take screenshots of your UI (use Chrome → right-click → "Capture screenshot" or use DevTools mobile mode)
-2. Save them to `docs/screenshots/` folder in this repo
-3. Name them: `desktop-dark.png`, `desktop-light.png`, `mobile-view.png`, `dropdown-filter.png`
-4. Push to GitHub — they'll appear automatically above
-
 ---
 
 ## ✨ Features — Complete List
