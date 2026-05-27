@@ -16,7 +16,6 @@ Visualize capital gains, simulate tax-saving strategies, and offset losses again
 
 ## 📸 Screenshots
 
-> Drop your screenshots into `docs/screenshots/` and they'll render here automatically.
 
 | Desktop — Dark Mode | Desktop — Light Mode |
 |---|---|
@@ -405,7 +404,7 @@ The following assumptions were made during development based on the assignment b
 
 ## 📝 License
 
-MIT © [Your Name](https://github.com/YOUR_USERNAME)
+MIT © [Lalit Devda](https://github.com/LalitDevdax)
 
 ---
 
